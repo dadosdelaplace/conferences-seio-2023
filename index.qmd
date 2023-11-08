@@ -1,0 +1,337 @@
+---
+title: "Predicción del voto electoral en España"
+title-slide-attributes:
+  data-background-image: img/data-science-2.jpeg
+  data-background-size: cover
+  data-background-opacity: "0.2"
+author: "Javier Álvarez Liébana y Enric Palau Payeras (UCM) • SEIO 2023 (Elche)"
+affiliation: Facultad de Estudios Estadísticos (UCM)
+lang: es
+language: custom_lang.yml
+format: 
+  revealjs:
+    theme: [default, style.scss]
+    chalkboard: true
+    multiplex: true
+    menu:
+      side: left
+      width: normal
+    footer: "[<strong>Javier Álvarez Liébana</strong>](...) • SEIO 2023 (Elche) • Fac. Estadística (UCM)"
+    slide-number: c/t
+execute:
+  echo: true
+---
+
+# Contexto, objetivos y antecedentes
+
+[**Incertidumbre electoral**]{style="color:#444442;"}
+
+---
+
+## Contexto
+
+-   El clima político español lleva experimentando grandes cambios sistemáticos desde 2008, pasando de un [**sistema prácticamente bipartidista**]{.hl-yellow} a un sistema donde prima la [**estrategia de pactos**]{.hl-yellow} multipartidista.
+
+. . .
+
+::: columns
+::: {.column width="70%"}
+-   En épocas de crisis, como la pandemia de COVID-19 o las repeticiones electorales de 2019, la [**expectación por los resultados electorales**]{.hl-yellow} es máxima.
+:::
+
+::: {.column width="30%"}
+![](img/quien-ganara.jpg)
+:::
+:::
+
+. . .
+
+-   Sin embargo, a pesar de contar con cada vez [**más casas demoscópicas**]{.hl-yellow} y agregadores («food chain feeding demand»), se ha extendido la idea de que las [**encuestas electorales no funcionan**]{.hl-yellow} y que no sirven para predecir el voto.
+
+---
+
+## Objetivos
+
+::: callout-tip
+## Objetivo 1: estudiar errores sistemáticos
+
+Automatizar un [**proceso de extracción, transformación y carga del histórico de datos electorales**]{.hl-yellow} así como de las proyección demoscópicas de las casas encuestadoras en España a nivel nacional.
+
+:::
+
+. . .
+
+::: callout-tip
+## Objetivo 2: analizar sesgos sistemáticos (house effects)
+
+Analizar la [**desviación sistemática de las casas encuestadoras**]{.hl-yellow}, [^1] desagregado por casa encuestadora, partido, bloque ideológico y cita electoral, entre otras variables.
+
+:::
+
+. . .
+
+::: callout-tip
+## Objetivo 3: predecir con Machine Learning
+
+Se aplicarán distintos [**algoritmos predictivos de Machine Learning**]{.hl-yellow} para mejorar tanto las predicciones de las casas encuestadoras como los promedios de agregadores electorales (Kiko Llaneras [^2], TheElectoralReport [^3], etc)
+
+:::
+
+[^1]: Masters, A.B.(2020). Estimating House Effects. <https://medium.com/swlh/estimating-houseeffects-5c465f2aca87>
+
+[^2]: <https://elpais.com/autor/francisco-llaneras-estrada/>
+
+[^3]: <https://app.precisaresearch.com/>
+
+
+---
+
+## Antecedentes
+
+* Pocos son los/as autores/as que han aplicado [**técnicas de Machine Learning**]{.hl-yellow} [^1] para la predicción de resultados electorales.
+
+
+
+[^1]: Hare, C., and Kutsuris, M. (2022). Measuring Swing Voters with a Supervised Machine Learning Ensemble. Political Analysis 31.
+
+[^2]: Silver, N. (2012). Calculating ‘House Effects’ of Polling Firms. <https://fivethirtyeight.com/features/calculatinghouse-effects-of-polling-firms>
+
+[^3]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
+
+[^4]: Ortega, A.L. (2022). ¿Cómo funciona el mercado de predicción? <https://aloport.github.io/predi/projects.html>
+
+---
+
+
+## Antecedentes
+
+
+* En la mayoría de casos dichas predicciones son hechas por medios de comunicación, institutos demoscópicos, partidos electorales o [**agregadores**]{.hl-yellow} (TheElectoralReport o FiveThirtyEight [^2] [^3]). 
+
+
+[^1]: Hare, C., and Kutsuris, M. (2022). Measuring Swing Voters with a Supervised Machine Learning Ensemble. Political Analysis 31.
+
+[^2]: Silver, N. (2012). Calculating ‘House Effects’ of Polling Firms. <https://fivethirtyeight.com/features/calculatinghouse-effects-of-polling-firms>
+
+[^3]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
+
+[^4]: Ortega, A.L. (2022). ¿Cómo funciona el mercado de predicción? <https://aloport.github.io/predi/projects.html>
+
+---
+
+
+## Antecedentes
+
+
+* Recientemente ha llegado a España los conocidos como [**mercados de predicción**]{.hl-yellow} [^4]: una especie de mercado de apuestas en los que se predice la intención de voto en función del consenso de los apostantes.
+
+
+[^1]: Hare, C., and Kutsuris, M. (2022). Measuring Swing Voters with a Supervised Machine Learning Ensemble. Political Analysis 31.
+
+[^2]: Silver, N. (2012). Calculating ‘House Effects’ of Polling Firms. <https://fivethirtyeight.com/features/calculatinghouse-effects-of-polling-firms>
+
+[^3]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
+
+[^4]: Ortega, A.L. (2022). ¿Cómo funciona el mercado de predicción? <https://aloport.github.io/predi/projects.html>
+
+---
+
+## Antecedentes
+
+
+* Algunos autores proponen algunas [**alternativas a las encuestas**]{.hl-yellow} para proporcionar a los partidos una estimación de su intención de voto basado en el [**análisis de reputación**]{.hl-yellow}  de sus candidatos [^1], como predictores correlados de dicha intención de voto.
+
+[^1]: Gutiérrez-Rodríguez, P., Villareal, R., Cuesta-Valiño, P., Blozis, S. A. (2023). Valuation of candidate brand equity dimensions and voting intention: alternative polling data in the Spanish presidential election. Humanities and Social Sciences Communications 10,
+
+---
+
+## Antecedentes
+
+* También se han usado recientemente el método [**Network scale-up (Network scale-up method, NSUM)**]{.hl-yellow}  [^1] [^2] para la estimación de intención de voto, haciendo uso de [**preguntas indirectas**]{.hl-yellow}  para la estimación del tamaño de una subpoblación de votantes [^3]
+
+[^1]: Maltiel, R., Raftery, A.E., McCormick, T.H., Baraff, A.J. (2015). Estimating Population Size Using the Network Scale Up Method. Ann Appl Stat 9
+
+[^2]: Kunke, J.P., Laga, I., Niu, X., McCormick, T.H. (2023). Comparing the Robustness of Simple Network Scale-Up Method (NSUM) Estimators. Center for statistics and the social science.
+
+[^3]: Martín-Arevalillo, J., Ramírez, J.M., Díaz-Aranda, S., Aguilar, J., Fernández-Anta, A., Lillo, R.E. (2023). Study and estimation of voting intention by network scale up methods. SEIO 2023.
+
+# Software empleado y fuentes de datos
+
+---
+
+## Software empleado
+
+* Para la recolección y depuración de los datos hemos usado tanto R como SQL.
+
+* Para el análisis exploratorio, visualización y modelización hemos usado R
+
+* Todo el código se encuentra libremente disponible en Github en  <https://github.com/3nriket/TFM_encuestas_y_elecciones_EPP_UCM_2023>
+
+![](img/Rlogo.png){width=300}
+![](img/Sql_data_base_with_logo.png){width=300}
+
+---
+
+## Fuentes de datos
+
+Para explicar la construcción de la base de datos (etapa 1 de la figura 1) debemos entender primero nuestro entorno de datos. En un primer momento, los datos se pueden clasificar según su sea origen: datos de encuestadoras (origen Wikipedia), datos electorales como el censo y porcentaje de voto (origen Ministerio del Interior) y datos “fundamentales” (origen fuentes diversas: p. ej. INE, el CIS, etc.). En resumen, partimos de los conjuntos de la tabla ilustrada a continuación:  Tabla 1: Descripción general de la base de datos por bloques. Nombre de la Tabla Fuente Descripción “national_surveys” Wikipedia Datos de encuestas y encuestadoras. “votes_national_by_mun” “votes_national” “census_national_by_year” Ministerio del Interior Datos de censo y elecciones. “BDfundamental” CIS, INE, DatosMacro etc. Datos de contexto socioeconómico, política, demografía etc. 
+
+# Metodología: extracción y depuración
+
+## Variable objetivo
+
+---
+
+## Depuración: encuestas
+
+4.2.1
+
+---
+
+## Depuración: resultados electorales
+
+4.2.2
+
+---
+
+## Depuración: variables externas
+
+4.2.3
+
+# Metodología: análisis de errores
+
+---
+
+## House effects
+
+---
+
+## Cronológico
+
+# Metodología: técnicas Machine Learning
+
+---
+
+## Train-validación-test
+
+---
+
+## Modelos de predicción
+
+# Resultados
+
+---
+
+## a
+
+# Conclusiones y líneas abiertas
+
+[**¿Qué hemos conseguido? ¿Qué nos falta?**]{style="color:#444442;"}
+
+---
+
+## Conclusiones
+
+-   Se ha creado una automatización para la recopilación tanto de encuestas como de datos electorales en nuestro país.
+
+. . .
+
+-   House effect
+
+. . .
+
+-   Se ha desarrollado una metodología propia (y aún así preliminar) para predecir la intención de voto, alcanzando en el mejor de los casos un error medio absoluto (MAE) de 0.21, frente a GAD3 con un MAE de 1.9
+
+. . .
+
+-   Vimos que los datos de encuestas y promedios son los bloques de variables que más información aportan y los más seleccionados entre nuestros modelos.
+
+---
+
+## Líneas abiertas futuras
+
+::: columns
+::: {.column width="60%"}
+🟥 [**Debilidad**]{.hl-red}: dificultad para la predicción de [**partidos nuevos**]{.hl-red} sin información sobre el sesgo de las encuestas
+:::
+
+::: {.column width="40%"}
+![](img/logos-partidos.jpeg)
+:::
+:::
+
+. . .
+
+✅ [**Futura solución**]{.hl-green}: mejorar en la creación de predictoras que permitan a los modelos captar un [**«recuerdo de voto»**]{.hl-green}: de partidos nuevos por bloques y regiones, así como crear modelos para [**estimar matrices de transferencia de voto**]{.hl-green}
+
+---
+
+## Líneas abiertas futuras
+
+::: columns
+::: {.column width="60%"}
+🟥 [**Debilidad**]{.hl-red}: todavía [**no incluye variables sociológicas**]{.hl-red}.
+:::
+
+::: {.column width="40%"}
+![](img/Logotipo_del_CIS.png)
+:::
+:::
+
+. . .
+
+✅ [**Futura solución**]{.hl-green}: incorporar a los modelos variables sociológicas extraídas de los [**microdatos del CIS**]{.hl-green} (como preocupaciones de los españoles)
+
+---
+
+## Líneas abiertas futuras
+
+🟥 [**Debilidad**]{.hl-red}: solo considera [**datos agregados**]{.hl-red} de encuestas.
+
+. . .
+
+✅ [**Futura solución**]{.hl-green}: automatizar la recopilación de [**encuestas a nivel autonómico**]{.hl-green} para posteriormente agregarlas en un modelo nacional
+
+---
+
+## Líneas abiertas futuras
+
+::: columns
+::: {.column width="60%"}
+🟥 [**Debilidad**]{.hl-red}: ganar en voto no implicar [**ganar en poder**]{.hl-red}
+:::
+
+::: {.column width="40%"}
+![](img/escan%CC%83os.jpeg)
+:::
+:::
+
+. . .
+
+✅ [**Futura solución**]{.hl-green}: desarrollar modelos de [**simulación de asignación de escaños**]{.hl-green} (en función de cada sistema electoral) en función de los datos desagregados por comunidades.
+
+. . .
+
+[**Otras ideas**]{.hl-yellow}: extenderlo a otros sistemas electorales, incluir dependencia entre regiones, etc. Todo ello está siendo estudiado para su posterior implementación en un [**paquete de R**]{.hl-yellow}, en colaboración con la sección de datos de RTVE.
+
+# ¡Gracias!
+
+ 
+
+✉️ [**Mail**]{.hl-yellow}: [javalv09\@ucm.es](mailto:javalv09@ucm.es){.email} (Facultad de Estadística de la UCM)
+
+ 
+
+[**Agradecimientos**]{.hl-purple}: «Dinámica compleja e inferencia no parámetrica», proyecto subvencionado por la Agencia Estatal de Investigación (AEI) del Ministerio de Ciencia e Innovación (PID2020-116587GB-I00)
+
+ 
+
+ 
+
+ 
+
+<p style="text-align: right; font-size:17px;">
+
+Diapositivas creadas integramente con Quarto en RStudio
+
+</p>
