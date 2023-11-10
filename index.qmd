@@ -35,11 +35,11 @@ execute:
 . . .
 
 ::: columns
-::: {.column width="70%"}
+::: {.column width="65%"}
 -   En épocas de crisis, como la pandemia de COVID-19 o las repeticiones electorales de 2019, la [**expectación por los resultados electorales**]{.hl-yellow} es máxima.
 :::
 
-::: {.column width="30%"}
+::: {.column width="35%"}
 ![](img/quien-ganara.jpg)
 :::
 :::
@@ -73,49 +73,32 @@ Analizar la [**desviación sistemática de las casas encuestadoras**]{.hl-yellow
 ::: callout-tip
 ## Objetivo 3: predecir con Machine Learning
 
-Se aplicarán distintos [**algoritmos predictivos de Machine Learning**]{.hl-yellow} para mejorar tanto las predicciones de las casas encuestadoras como los promedios de agregadores electorales (Kiko Llaneras [^2], TheElectoralReport [^3], etc)
+Se aplicarán distintos [**algoritmos predictivos de Machine Learning**]{.hl-yellow} para mejorar tanto las predicciones de las casas encuestadoras como los promedios de agregadores electorales (Kiko Llaneras, TheElectoralReport [^2], etc)
 
 :::
 
 [^1]: Masters, A.B.(2020). Estimating House Effects. <https://medium.com/swlh/estimating-houseeffects-5c465f2aca87>
 
-[^2]: <https://elpais.com/autor/francisco-llaneras-estrada/>
-
-[^3]: <https://app.precisaresearch.com/>
+[^2]:  <https://app.precisaresearch.com/>
 
 
 ---
 
 ## Antecedentes
 
-* Pocos son los/as autores/as que han aplicado [**técnicas de Machine Learning**]{.hl-yellow} [^1] para la predicción de resultados electorales.
+* Pocos son los/as autores/as que han aplicado [**técnicas de Machine Learning**]{.hl-yellow} [^1a] para la predicción de resultados electorales (al menos cuya metodología sea pública y transparente).
+
+. . .
+
+* En la mayoría de casos dichas predicciones son hechas por medios de comunicación, institutos demoscópicos, partidos electorales o [**agregadores**]{.hl-yellow} (TheElectoralReport o FiveThirtyEight [^2a] [^3a]). 
 
 
+[^1a]: Hare, C., and Kutsuris, M. (2022). Measuring Swing Voters with a Supervised Machine Learning Ensemble. Political Analysis 31.
 
-[^1]: Hare, C., and Kutsuris, M. (2022). Measuring Swing Voters with a Supervised Machine Learning Ensemble. Political Analysis 31.
+[^2a]: Silver, N. (2012). Calculating ‘House Effects’ of Polling Firms. <https://fivethirtyeight.com/features/calculatinghouse-effects-of-polling-firms>
 
-[^2]: Silver, N. (2012). Calculating ‘House Effects’ of Polling Firms. <https://fivethirtyeight.com/features/calculatinghouse-effects-of-polling-firms>
+[^3a]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
 
-[^3]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
-
-[^4]: Ortega, A.L. (2022). ¿Cómo funciona el mercado de predicción? <https://aloport.github.io/predi/projects.html>
-
----
-
-
-## Antecedentes
-
-
-* En la mayoría de casos dichas predicciones son hechas por medios de comunicación, institutos demoscópicos, partidos electorales o [**agregadores**]{.hl-yellow} (TheElectoralReport o FiveThirtyEight [^2] [^3]). 
-
-
-[^1]: Hare, C., and Kutsuris, M. (2022). Measuring Swing Voters with a Supervised Machine Learning Ensemble. Political Analysis 31.
-
-[^2]: Silver, N. (2012). Calculating ‘House Effects’ of Polling Firms. <https://fivethirtyeight.com/features/calculatinghouse-effects-of-polling-firms>
-
-[^3]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
-
-[^4]: Ortega, A.L. (2022). ¿Cómo funciona el mercado de predicción? <https://aloport.github.io/predi/projects.html>
 
 ---
 
@@ -123,37 +106,31 @@ Se aplicarán distintos [**algoritmos predictivos de Machine Learning**]{.hl-yel
 ## Antecedentes
 
 
-* Recientemente ha llegado a España los conocidos como [**mercados de predicción**]{.hl-yellow} [^4]: una especie de mercado de apuestas en los que se predice la intención de voto en función del consenso de los apostantes.
+* Recientemente ha llegado a España los conocidos como [**mercados de predicción**]{.hl-yellow} [^4a]: una especie de mercado de apuestas en los que se predice la intención de voto en función del consenso de los apostantes.
+
+. . .
+
+* Algunos autores proponen algunas [**alternativas a las encuestas**]{.hl-yellow} para proporcionar a los partidos una estimación de su intención de voto basado en el [**análisis de reputación**]{.hl-yellow}  de sus candidatos [^1aa], como predictores correlados de dicha intención de voto.
 
 
-[^1]: Hare, C., and Kutsuris, M. (2022). Measuring Swing Voters with a Supervised Machine Learning Ensemble. Political Analysis 31.
+[^4a]: Ortega, A.L. (2022). ¿Cómo funciona el mercado de predicción? <https://aloport.github.io/predi/projects.html>
 
-[^2]: Silver, N. (2012). Calculating ‘House Effects’ of Polling Firms. <https://fivethirtyeight.com/features/calculatinghouse-effects-of-polling-firms>
-
-[^3]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
-
-[^4]: Ortega, A.L. (2022). ¿Cómo funciona el mercado de predicción? <https://aloport.github.io/predi/projects.html>
-
----
-
-## Antecedentes
+[^1aa]: Gutiérrez-Rodríguez, P., Villareal, R., Cuesta-Valiño, P., Blozis, S. A. (2023). Valuation of candidate brand equity dimensions and voting intention: alternative polling data in the Spanish presidential election. Humanities and Social Sciences Communications 10,
 
 
-* Algunos autores proponen algunas [**alternativas a las encuestas**]{.hl-yellow} para proporcionar a los partidos una estimación de su intención de voto basado en el [**análisis de reputación**]{.hl-yellow}  de sus candidatos [^1], como predictores correlados de dicha intención de voto.
-
-[^1]: Gutiérrez-Rodríguez, P., Villareal, R., Cuesta-Valiño, P., Blozis, S. A. (2023). Valuation of candidate brand equity dimensions and voting intention: alternative polling data in the Spanish presidential election. Humanities and Social Sciences Communications 10,
 
 ---
 
 ## Antecedentes
 
-* También se han usado recientemente el método [**Network scale-up (Network scale-up method, NSUM)**]{.hl-yellow}  [^1] [^2] para la estimación de intención de voto, haciendo uso de [**preguntas indirectas**]{.hl-yellow}  para la estimación del tamaño de una subpoblación de votantes [^3]
+* También se han usado recientemente el método [**Network scale-up (Network scale-up method, NSUM)**]{.hl-yellow}  [^1b] [^2b] para la estimación de intención de voto, haciendo uso de [**preguntas indirectas**]{.hl-yellow}  para la estimación del tamaño de una subpoblación de votantes [^3b]
 
-[^1]: Maltiel, R., Raftery, A.E., McCormick, T.H., Baraff, A.J. (2015). Estimating Population Size Using the Network Scale Up Method. Ann Appl Stat 9
+[^1b]: Maltiel, R., Raftery, A.E., McCormick, T.H., Baraff, A.J. (2015). Estimating Population Size Using the Network Scale Up Method. Ann Appl Stat 9
 
-[^2]: Kunke, J.P., Laga, I., Niu, X., McCormick, T.H. (2023). Comparing the Robustness of Simple Network Scale-Up Method (NSUM) Estimators. Center for statistics and the social science.
+[^2b]: Kunke, J.P., Laga, I., Niu, X., McCormick, T.H. (2023). Comparing the Robustness of Simple Network Scale-Up Method (NSUM) Estimators. Center for statistics and the social science.
 
-[^3]: Martín-Arevalillo, J., Ramírez, J.M., Díaz-Aranda, S., Aguilar, J., Fernández-Anta, A., Lillo, R.E. (2023). Study and estimation of voting intention by network scale up methods. SEIO 2023.
+[^3b]: Martín-Arevalillo, J., Ramírez, J.M., Díaz-Aranda, S., Aguilar, J., Fernández-Anta, A., Lillo, R.E. (2023). Study and estimation of voting intention by network scale up methods. SEIO 2023.
+
 
 # Software empleado y fuentes de datos
 
@@ -161,42 +138,206 @@ Se aplicarán distintos [**algoritmos predictivos de Machine Learning**]{.hl-yel
 
 ## Software empleado
 
-* Para la recolección y depuración de los datos hemos usado tanto R como SQL.
+* Para la recolección y depuración de los datos hemos usado tanto [**R**]{.hl-yellow} como [**SQL**]{.hl-yellow}.
 
 * Para el análisis exploratorio, visualización y modelización hemos usado R
 
-* Todo el código se encuentra libremente disponible en Github en  <https://github.com/3nriket/TFM_encuestas_y_elecciones_EPP_UCM_2023>
+* Todo el código se encuentra libremente disponible en [**Github**]{.hl-yellow} en  <https://github.com/3nriket/TFM_encuestas_y_elecciones_EPP_UCM_2023>
 
-![](img/Rlogo.png){width=300}
-![](img/Sql_data_base_with_logo.png){width=300}
+![](img/Rlogo.png){width=400}
+![](img/Sql_data_base_with_logo.png){width=400}
 
 ---
 
 ## Fuentes de datos
 
-Para explicar la construcción de la base de datos (etapa 1 de la figura 1) debemos entender primero nuestro entorno de datos. En un primer momento, los datos se pueden clasificar según su sea origen: datos de encuestadoras (origen Wikipedia), datos electorales como el censo y porcentaje de voto (origen Ministerio del Interior) y datos “fundamentales” (origen fuentes diversas: p. ej. INE, el CIS, etc.). En resumen, partimos de los conjuntos de la tabla ilustrada a continuación:  Tabla 1: Descripción general de la base de datos por bloques. Nombre de la Tabla Fuente Descripción “national_surveys” Wikipedia Datos de encuestas y encuestadoras. “votes_national_by_mun” “votes_national” “census_national_by_year” Ministerio del Interior Datos de censo y elecciones. “BDfundamental” CIS, INE, DatosMacro etc. Datos de contexto socioeconómico, política, demografía etc. 
+Se han usado fundamentalmente [**3 tipos de bases de datos**]{.hl-yellow}
+
+* [**Proyecciones demoscópicas**]{.hl-yellow}. Se automatizará la recopilación de [**datos agregados**]{.hl-purple} de encuestas a nivel nacional.
+
+. . .
+
+* [**Resultados electorales**]{.hl-yellow}. Se extraerán [**datos electorales**]{.hl-purple} (censo, porcentaje de voto, etc) provenientes del Ministerio del Interior.
+
+. . .
+
+* [**Variables externas socioeconómicas**]{.hl-yellow}. Se extraerán [**variables socioeconómicas**]{.hl-purple} provenientes del INE, CIS, etc
+
+. . .
+
+> La idea principal del trabajo es que una encuesta, en un instante temporal, falla, pero la evolución del conjunto de las mismas nos puede servir para realizar predicciones certeras.
+
 
 # Metodología: extracción y depuración
 
 ## Variable objetivo
 
+[**¿Cuál es la variable objetivo?**]{.hl-yellow}
+
+. . .
+
+* Denotaremos como $\hat{V}_{ij}(t)$ la [**predicción de porcentaje de voto**]{.hl-yellow} de una casa encuestadora $s_i$, para un partido $p_j$, en un instante temporal $t$ previo a las elecciones.
+
+. . .
+
+* Denotaremos como $V_{j}$ el [**porcentaje de voto real**]{.hl-yellow} obtenido el día de las elecciones.
+
+. . .
+
+Por cada casa encuestadora $s_i$ y partido $p_j$, en un instante temporal $t$, anterior a las elecciones, tenemos entonces que
+
+$$V_{j} = \hat{V}_{ij}(t) + \varepsilon_{ij}(t), \quad i=1,\ldots,E, \quad j=1,\ldots, P$$
+
+---
+
+## Variable objetivo
+
+$$V_{j} = \hat{V}_{ij}(t) + \varepsilon_{ij}(t), \quad i=1,\ldots,E, \quad j=1,\ldots, P$$
+
+En contraste con uno de los paradigmas principales del Machine Learning, en nuestro problema de [**medidas repetidas**]{.hl-yellow}, con un mismo valor de la variable objetivo $V_j$ para una muestra de predictoras  $V_{j} = \hat{V}_{ij}(t)$
+
+. . .
+
+
+&nbsp;
+
+
+El [**objetivo de este trabajo**]{.hl-yellow} es ser capaces de, en un instante de tiempo $t$ estimar los errores cometidos por cada encuestadora $\hat{\varepsilon}_{ij}(t)$, para cada partido, de manera que la [**estimación agregada final**]{.hl-yellow} sea el resultado del promedio de sus predicciones, tras corregirlas por los errores estimados cometidos
+
+$$\hat{V}_{j} = \frac{1}{E} \sum_{i=1}^{E} \left( \hat{V}_{ij}(t) + \hat{\varepsilon}_{ij}(t) \right), \quad j=1,\ldots, P$$
+
 ---
 
 ## Depuración: encuestas
 
-4.2.1
+Los [**datos agregados de las encuestadoras**]{.hl-yellow} proceden de bases de datos abiertas como la Wikipedia
+
+![](img/encuestas-wiki.jpg)
+
+El objetivo será predecir el porcentaje de voto real (primera fila de la tabla), por los principales partidos políticos (rectángulo discontinuo azul), en las distintas carreras electorales desde 1982 hasta la actualidad, haciendo uso de la estimación de voto de cada casa (matriz de valores del recuadro verde).
 
 ---
 
-## Depuración: resultados electorales
+## Depuración: encuestas
 
-4.2.2
+
+
+La [**automatización en la extracción**]{.hl-yellow} contó con los siguientes pasos:
+
+* Generación de una [**base de datos de links**]{.hl-yellow} en los que realizar la búsqueda de resultados mediante el uso con expresiones regulares para las distintas elecciones desde 1982.
+
+
+* Acceso al código html para extraer de los [**png de los logos los nombres**]{.hl-yellow} de los partidos políticos
+
+
+![](img/wiki-links.jpg){width=700}
 
 ---
 
-## Depuración: variables externas
+## Depuración: encuestas
 
-4.2.3
+Una vez construida la base de (meta)datos, se [**accedió al código html**]{.hl-yellow} de cada una de ellas para extraer los datos de cada una de las tablas. Estos son algunos de los pasos adoptados en la depuración
+
+. . .
+
+* [**Recodificar**]{.hl-green} el nombre de los partidos y casas encuestadoras.
+
+. . .
+
+* Cálcular el número de [**días de trabajo de campo**]{.hl-green} de cada encuesta y los [**días que quedan**]{.hl-green} para la celebración de las elecciones.
+
+. . .
+
+* [**Descartar encuestas sin tamaño muestral**]{.hl-red} o con [**menos de 1 día de trabajo de campo**]{.hl-red}, así como encuestas realizadas por partidos.
+
+. . .
+
+
+* Dado que el primer objetivo será [**rankear el binomio casa encuestadora - partido**]{.hl-yellow}, se procedió a [**descartar casas poco frecuentes**]{.hl-red} (<1%) cuya precisión no podemos calibrar.
+
+---
+
+## Depuración: encuestas
+
+La [**tabla (tidy data) resultante se aproxima a las 12 000 observaciones**]{.hl-yellow} (porcentaje de voto que una encuestadora estima, para cada partido, fecha de campo y carrera electoral), identificando de manera unívoca cada encuesta (casa encuestadora + fechas de campo)
+
+![](img/encuestas-preproc.jpg)
+
+---
+
+## Depuración: elecciones
+
+Los [**datos relativos a resultados electorales**]{.hl-yellow} se han obtenido a través del portal Infoelectoral del Ministerio del Interior, a través del proyecto de paquete de R `{pollspain}`, que tenemos actualmente en desarrollo.
+
+&nbsp;
+
+
+En esta fuente, los datos se encuentran desagregados por [**distritos electorales**]{.hl-yellow}, que para esta tentativa preliminar hemos decidido [**agregarlos a nivel nacional**]{.hl-yellow}, para cada partido y carrera electorales, tanto el porcentaje de voto como variables que cuantifique el censo, la participación, votos blancos y votos nulos.
+
+&nbsp;
+
+Se ha tenido que realizar un arduo trabajo de normalización de los partidos
+
+---
+
+## Depuración: elecciones
+
+
+Con los datos de casas encuestadores y los resultados reales, podremos construir tanto el [**promedio/consenso de mercado**]{.hl-yellow} (encuestas ponderadas por su tamaño muestral y ventana temporal) como el análisis de las [**desviaciones respecto a la realidad**]{.hl-yellow}
+
+![](img/electoral-results.jpg)
+
+---
+
+
+## Depuración: exógenas
+
+[**¿Por qué incluir variables exógenas?**]{.hl-yellow}
+
+. . .
+
+Aunque considerar en modelos de predicción electoral solo variables exógenas puede incorporar excesivo ruido y tener un bajo poder predictivo, no incorporarlas puede ocasionar un [**incremento del sesgo y variabilidad del error al modelo, especialmente si las encuestadoras han fallado**]{.hl-yellow} o no han sido correctamente seleccionadas
+
+&nbsp;
+
+Nate Silver [^1c] cuantificó en un 30% la variabilidad explicada por las condiciones económicas en las elecciones americanas de 2020.
+
+[^1c]: Silver, N. (2020). How FiveThirtyEight’s 2020 Presidential Forecast Works — And What’s Different Because Of COVID-19. Fivethirtyeight. <https://fivethirtyeight.com/features/how-fivethirtyeights-2020presidential-forecast-works-and-whats-different-because-of-covid-19/>
+
+---
+
+## Depuración: exógenas
+
+Por ello hemos [**recopilado variables exógenas desde 1980**]{.hl-yellow}, agrupadas en los siguientes bloques temáticos:
+
+* [**Medio ambiente**]{.hl-purple}: generación y consumo eléctrico, emisiones de CO2, reservas de petróleo, etc. Según las encuestas de IPSOS «en España, del 74% al 88% de los potenciales electores estaría considerando votar a un partido que reduzca la factura energética e impulse la transición energética» [^1e]
+
+
+. . .
+
+* [**Demografía y sociedad**]{.hl-purple}: esperanza de vida, casos de violencia machista, etc.  De acuerdo con el informe de IPSOS [^1e], la justicia social es una preocupación emergente entre los votantes en España.
+
+[^1e]: Encuesta IPSOS para Grupo Crecimiento Verde (2019). El medio ambiente pesa en la decisión de voto <https://grupocrecimientoverde.org/elmedio-ambiente-pesa-en-la-decision-de-voto/>
+
+---
+
+
+## Depuración: exógenas
+
+Por ello hemos [**recopilado variables exógenas desde 1980**]{.hl-yellow}, agrupadas en los siguientes bloques temáticos:
+
+* [**Economía**]{.hl-purple}: inflación, IPC, etc. Dicha inclusión está basada en los postulados de Fearon (1998), Kuklinski y West (1981) y Lewis-Beck y Skalaban (1989), como se ilustra en Jaime-Castillo et al. (2014) [^saez], que indicaban que el voto económico es un instrumento para seleccionar al que el individuo considera el mejor de los candidatos de la carrera (aunque no por una mayoría de ciudadanos).
+
+[^saez]: Jaime-Castillo, A.M., Sáez-Lozano, J.L.(2014). Atribución de la responsabilidad y voto económico El caso de España. El trimestre económico 81. <https://www.eltrimestreeconomico.com.mx/index.php/te/article/view/369/70>
+
+. . .
+  
+* [**Política y Gobierno**]{.hl-purple}: gestión del gobierno, presupuestos generales del estado, etc. 
+
+. . .
+
+En este trabajo hemos incorporado finalmente **31 indicadores a nivel nacional**. 
+
 
 # Metodología: análisis de errores
 
@@ -204,25 +345,246 @@ Para explicar la construcción de la base de datos (etapa 1 de la figura 1) debe
 
 ## House effects
 
+La [**hipótesis principal**]{.hl-yellow} del trabajo no es (de momento) desarrollar el mejor método de predicción en el contexto de Machine Learning, sino ilustrar como, con métodos ya conocidos, se puede obtener un [**buen resultado predictivo entendiendo los sesgos sistemáticos de las casas encuestadoras**]{.hl-yellow}.
+
+
+&nbsp;
+
+. . .
+
+El [**simple promedio ponderado**]{.hl-yellow} de encuestas de los medios de comunicación y agregadores solo nos ofrece una [**fotografía del estado de la precisión**]{.hl-yellow} de las casas encuestadoras, pero no permite ofrecer precisión a partir de cierto umbral
+
+. . .
+
+&nbsp;
+
+El objetivo del trabajo es chequear como con técnicas de Machine Learning, el [**consenso de los errores**]{.hl-yellow} puede ayudarnos a una predicción precisa.
+
 ---
 
-## Cronológico
+## House effects
+
+
+Sea $\hat{V}_{ij}(t)$ la predicción de intención de voto de cada casa encuestadora $s_i$ y para cada partido $p_j$, en un instante temporal $t$, y sea $\varepsilon_{ij}(t)$ el error real que están cometiendo (cuando $t$ es la cita electoral) y $V_{j}$ el resultado real para cada partido, tal que 
+
+$$\varepsilon_{ij}(t) = V_{j} - \hat{V}_{ij}(t) , \quad i=1,\ldots,E, \quad j=1,\ldots, P$$
+
+
+. . .
+
+Llamaremos [**house effect**]{.hl-yellow}, denotado como $HE_{ij}$ al [**sesgo sistemático**]{.hl-yellow} (a lo largo del tiempo $[t_0, t_1]$) de una casa encuestadora [**respecto al promedio**]{.hl-yellow} de un partido o bloque ideológico, definido como
+
+
+$$HE_{ij}(t_0, t_1) = \frac{1}{\left| T \right|}\sum_{t \in T} \left| \hat{V}_{ij}(t) - \frac{1}{\left| T \right|}\sum_{t \in T} \omega_{i,j} \hat{V}_{ij}(t)\right|$$
+
+
+---
+
+## House effects y promedios
+
+Para analizar dichas desviaciones se han definido diferentes [**promedios**]{.hl-yellow}, todos ellos [**ponderados por tamaño de la encuesta y ventana temporal**]{.hl-yellow} (encuestas con mayor muestra y más recientes tendrán más peso)
+
+* [**Promedio general partido**]{.hl-purple}: promedio ponderado de todas las estimaciones de voto, de todas las casas, para un determinado partido, en un rango temporal.
+
+. . .
+
+* [**Promedio general ideológico**]{.hl-purple}: promedio ponderado de todas las estimaciones de voto, de todas las casas, para un determinado bloque ideológico, en un rango temporal.
+
+. . .
+
+* [**Promedio casa partido**]{.hl-purple}: promedio ponderado de todas las estimaciones de voto, para un determinado partido y casa encuestadora.
+
+. . .
+
+* [**Promedio casa ideológico**]{.hl-purple}: promedio ponderado de todas las estimaciones de voto,  para un determinado bloque ideológico y casa encuestadora.
+
+---
+
+## House effects y promedios
+
+
+Así el [**house effect**]{.hl-yellow} puede ser definido como la [**infraestimación o sobreestimación**]{.hl-yellow} de una casa encuestadora respecto a un partido/bloque [**respecto al promedio ponderado**]{.hl-yello2} correspondiente, para un periodo de tiempo dado para cada cita electoral.
+
+. . .
+
+:::: columns
+::: {.column width="35%"}
+
+[**Ejemplo**]{.hl-green}: para las últimas elecciones de 2019 se refleja un sesgo sistemático favorable al PP y/o ala derecha de encuestadoras como Gesop. Por otro lado, el CIS tuvo un sesgo sistemático en favor de PSOE y al ala izquierda. 
+
+
+:::
+
+::: {.column width="65%"}
+
+![](img/house-effect-casas.jpg)
+:::
+::::
+
+---
+
+## House effects y promedios
+
+
+![Los puntos de colores son las estimaciones de cada encuesta; los puntos con contorno negro representan el promedio de la casa; la barra representa el promedio de mercado; y la línea horizontal equivale al voto observado.](img/house-effect-partido-casa.jpg)
+
+
+Estos sesgos no solo no los consideramos perjudiciales para nuestros modelos sino que, si son continuados en el tiempo, la hipótesis es que servirán a nuestros modelos como un "recuerdo de estimación".
+
+
 
 # Metodología: técnicas Machine Learning
+
 
 ---
 
 ## Train-validación-test
 
+En el trabajo se excluyeron las recientes elecciones de 2023. De las 11 036 restantes se decidió [**particionar**]{.hl-yellow} como sigue
+
+* [**Entrenamiento (train)**]{.hl-yellow}: 80% de los datos
+  - **Validación**: validación cruzada con $k = 4$ folds y 100 repeticiones.
+
+* [**Test**]{.hl-yellow}: 20% de los datos
+
+. . .
+
+La [**métrica o bondad de ajuste**]{.hl-yellow} a evaluar será el [**error medio absoluto (MAE)**]{.hl-yello2} (más adecuado para modelos que tengan bajo error de predicción pero con valores extremos e inestables en los errores)
+
+---
+
+## Competidores
+
+[**Referencia**]{.hl-yellow}: por tener una referencia, el error absoluto medio de los promedios de encuestas en España ronda los [**dos puntos por partido**]{.hl-yellow}
+
+![](img/mae-theelectoralreport.jpg)
+
+---
+
+## Missing y outliers
+
+Aunque algunos modelos son robustos frente a outliers y ausentes, con el objetivo de ganar interpretabilidad y armonía entre los modelos construido, se decidido [**imputar**]{.hl-yellow} estos datos. Para ello se comparó dos metodologías:
+
+:::: columns
+::: {.column width="25%"}
+
+
+* Imputación por [**estadísticos de localización**]{.hl-yellow}
+
+* Imputación por [**bagging**]{.hl-yellow}
+
+
+
+:::
+
+::: {.column width="75%"}
+
+![](img/distribucion.jpg)
+
+:::
+
+::::
+
+
+El **MAE conseguido en los modelos con variables imputadas por estadísticos es ligeramente peor** que el de los modelos con imputación por Bagging, siendo respectivamente de 1.2 y 0.9.
+
 ---
 
 ## Modelos de predicción
 
-# Resultados
+* [**Árboles**]{.hl-yellow}: usaremos árboles de regresión para predecir nuestro error continuo.
+  - **Método de división**: usamos F de Snedecor (ANOVA), que toma la división que varie más la media de la variable dependiente.
+  - **cp**: parámetro de poda
+  - **minbucket**: número de observaciones mínimas en cada nodo final (desde un 1% (70) hasta un 20%).
+  - **maxsurrogate**: el árbol no usa todas las variables, va seleccionando las mejores (método de selección _embedded_).
+
+----
+
+## Modelos de predicción
+
+![](img/mejor-arbol.jpg)
 
 ---
 
-## a
+## Modelos de predicción
+
+
+![](img/arbol-comparativa.jpg)
+
+---
+
+## Modelos de predicción
+
+c a fin de superar las limitaciones de los árboles, usaremos modelos con el mismo concepto base y con el método de Ensamblado (combinando múltiples modelos en uno nuevo).  En el caso del Baggin se han seleccionado $n<N$ observaciones con reemplazamiento (o sin) de los datos originales y se aplica un árbol.
+
+&nbsp;
+
+* [**Random Forest**]{.hl-yellow}: incorporar la aleatoriedad en las variables utilizadas para segmentar cada nodo del árbol. El proceso es prácticamente igual, pero a diferencia del que se hace en Bagging, cada vez que se abre un nodo seleccionaremos $p$ ($p = 129$) variables de las $k$ originales y de esas $p$ elegidas se escoge la mejor para llevar a cabo la partición en ese nodo.
+
+---
+
+## Modelos de predicción
+
+
+![](img/rf-mejor.jpg)
+
+
+---
+
+## Modelos de predicción
+
+
+![](img/rf-comparativa.jpg)
+
+---
+
+## Modelos de predicción
+
+* [**Gradient Boosting**]{.hl-yellow}: formados por un conjunto de árboles de decisión, entrenados de forma secuencial, de forma que cada nuevo árbol trata de mejorar los errores de los árboles anteriores, modificando las predicciones en la dirección de decrecimiento dada por el negativo del gradiente de la función de error (con _Early Stopping_ para evitar el sobreajuste y marcar así un número de iteraciones de parada).
+  - **Shrinkage ($λ$) o “learning rate”**: representa el ritmo de aprendizaje y cuanto menor sea, más interaciones se necesitan. En nuestro caso varía desde 0.001 (valor por defecto) hasta 1. 
+
+
+---
+
+## Modelos de predicción
+
+![](img/gbm-mejor.jpg)
+
+---
+
+## Modelos de predicción
+
+![](img/gbm-comparativa.jpg)
+
+---
+
+## Modelos de predicción
+
+* [**Redes Neuronales**]{.hl-yellow}: a fin de complementar los inconvenientes de los filtros o rankear variables, aquí se recurrió a _wrappers_ como técnica de selección de variables (métodos de búsqueda secuencial que bucean entre distintas combinaciones de variables)
+
+&nbsp;
+
+* [**Modelos SVM**]{.hl-yellow} con kernels lineales y polinomiales de grado 2 y 3.
+
+---
+
+## Modelos de predicción
+
+
+![](img/svm-mejor.jpg)
+
+---
+
+## Modelos de predicción
+
+![](img/svm-comparativa.jpg)
+
+---
+
+## Modelos de predicción
+
+
+![](img/final.jpg)
 
 # Conclusiones y líneas abiertas
 
@@ -232,19 +594,20 @@ Para explicar la construcción de la base de datos (etapa 1 de la figura 1) debe
 
 ## Conclusiones
 
--   Se ha creado una automatización para la recopilación tanto de encuestas como de datos electorales en nuestro país.
+- Se ha creado una [**automatización para la recopilación**]{.hl-yellow} tanto de encuestas como de datos electorales en nuestro país.
 
 . . .
 
--   House effect
+- Se ha comprobado que el hecho de que las casas encuestadoras cometan [**sesgos sistemáticos**]{.hl-yellow} puede ser incluso beneficioso en la predicción, alimentando a los modelos con diferentes de variables que les permita capturar algo similar a un «recuerdo de estimación».
 
 . . .
 
--   Se ha desarrollado una metodología propia (y aún así preliminar) para predecir la intención de voto, alcanzando en el mejor de los casos un error medio absoluto (MAE) de 0.21, frente a GAD3 con un MAE de 1.9
+-   Se ha desarrollado una metodología propia (y aún así preliminar) para predecir la intención de voto, alcanzando en el mejor de los casos un error medio absoluto (MAE) de 0.21, frente a la mejor casa encuestadora (GAD3 con un MAE de 1.9) o al promedio de ellas (2.2 de MAE)
 
 . . .
 
--   Vimos que los datos de encuestas y promedios son los bloques de variables que más información aportan y los más seleccionados entre nuestros modelos.
+-  Vimos que los datos de encuestas y promedios son los bloques de variables que más información aportan y los más seleccionados entre nuestros modelos.
+
 
 ---
 
@@ -320,18 +683,16 @@ Para explicar la construcción de la base de datos (etapa 1 de la figura 1) debe
 
 ✉️ [**Mail**]{.hl-yellow}: [javalv09\@ucm.es](mailto:javalv09@ucm.es){.email} (Facultad de Estadística de la UCM)
 
- 
+
+&nbsp;
 
 [**Agradecimientos**]{.hl-purple}: «Dinámica compleja e inferencia no parámetrica», proyecto subvencionado por la Agencia Estatal de Investigación (AEI) del Ministerio de Ciencia e Innovación (PID2020-116587GB-I00)
 
- 
 
- 
+&nbsp;
 
- 
+&nbsp;
 
-<p style="text-align: right; font-size:17px;">
+&nbsp;
 
-Diapositivas creadas integramente con Quarto en RStudio
-
-</p>
+<p style="text-align: right; font-size:17px;">Diapositivas creadas integramente con **Quarto** en RStudio</p>
