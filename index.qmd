@@ -602,7 +602,7 @@ c a fin de superar las limitaciones de los árboles, usaremos modelos con el mis
 
 . . .
 
--   Se ha desarrollado una metodología propia (y aún así preliminar) para predecir la intención de voto, alcanzando en el mejor de los casos un error medio absoluto (MAE) de 0.21, frente a la mejor casa encuestadora (GAD3 con un MAE de 1.9) o al promedio de ellas (2.2 de MAE)
+-   Se ha desarrollado una metodología propia (y aún así preliminar) para predecir la intención de voto, alcanzando en el mejor de los casos un [**error medio absoluto (MAE) de 0.21**]{.hl-yellow}, frente a la mejor casa encuestadora (GAD3 con un MAE de 1.9) o al promedio de ellas (2.2 de MAE)
 
 . . .
 
